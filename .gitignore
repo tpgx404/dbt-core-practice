@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# DBT specific folders
+target/
+dbt_packages/
+logs/
+
+# IDE / OS specific
+.DS_Store
+.vscode/
+.env
