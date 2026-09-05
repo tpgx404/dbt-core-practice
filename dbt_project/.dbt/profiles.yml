@@ -1,0 +1,14 @@
+my_dbt_project:
+  outputs:
+    dev:
+      type: postgres
+      host: postgres         # <-- Must be 'postgres' (the container name)
+      user: dbt_user         # <-- Must match docker-compose POSTGRES_USER
+      pass: dbt_password     # <-- Must match docker-compose POSTGRES_PASSWORD
+      port: 5432
+      dbname: dbt_warehouse  # <-- Must match docker-compose POSTGRES_DB
+      schema: public
+      threads: 4
+    prod:
+      # (you can leave or copy dev here if needed)
+  target: dev
